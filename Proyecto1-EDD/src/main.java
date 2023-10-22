@@ -1,5 +1,6 @@
 import EDD.Grafo;
-
+import Extras.Funciones;
+import Interfaces.Ventana1;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -17,40 +18,29 @@ public class main {
      */
     public static void main(String[] args) {
         
+        Ventana1 ventana = new Ventana1();
+        ventana.setLocationRelativeTo(null);
+        ventana.setVisible(true);
         
-        Grafo miGrafo = new Grafo();
+        Funciones func = new Funciones();
+        Grafo miGrafo = func.leer_txt();
+        //miGrafo.agregarNodo("@jose");
+        //miGrafo.conectarNodos("@jose", "@pepe");
+        //miGrafo.conectarNodos("@pepe", "@jose");
+        //miGrafo.conectarNodos("@jose", "@mazinger");
+        //miGrafo.eliminarNodo("@jose");
+        //func.escribir_txt(miGrafo);
         
-        miGrafo.agregarNodo("@0");
-        miGrafo.agregarNodo("@1");
-        miGrafo.agregarNodo("@2");
-        miGrafo.agregarNodo("@3");
-        miGrafo.agregarNodo("@4");
-        //miGrafo.agregarNodo("@5");
-        //miGrafo.agregarNodo("@6");
-        //miGrafo.agregarNodo("@7");
-        miGrafo.conectarNodos("@0", "@1");
-        miGrafo.conectarNodos("@1", "@2");
-        miGrafo.conectarNodos("@1", "@0");
-        miGrafo.conectarNodos("@1", "@3");
-        miGrafo.conectarNodos("@1", "@4");
-        miGrafo.conectarNodos("@3", "@1");
-        miGrafo.conectarNodos("@4", "@2");
-        miGrafo.conectarNodos("@4", "@3");
-        //miGrafo.conectarNodos("@4", "@2");
-        //miGrafo.conectarNodos("@6", "@4");
-        //miGrafo.conectarNodos("@6", "@7");
         
-
         
-        //miGrafo.desconectarNodos("@p", "@j");
-        //miGrafo.desconectarNodos("@e", "@j");
+        
+        
 
         
         //miGrafo.imprimirGrafo();
-        //miGrafo.imprimirSCCs();
-        miGrafo.Traspuesto().imprimirGrafo();
+        //miGrafo.Traspuesto().imprimirGrafo();
         miGrafo.obtenerSCCs();
-        //miGrafo.imprimirSCCs();
+        
   
     }
     
